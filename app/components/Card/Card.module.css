@@ -1,0 +1,8 @@
+.img {
+    width:50rem;
+    height:10rem;
+ 
+ /*Scale down will take the necessary specified space that is 100px x 100px without stretching the image*/
+     object-fit:scale-down;
+     object-fit: cover;
+ }

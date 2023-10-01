@@ -1,6 +1,9 @@
 import React from 'react'
-import AddToCart from '../AddToCart/AddToCart'
+import Card from '../Card/Card'
 // import styles from './Home.module.css';
+import CoffeWriting from '@/public/images/coffee-writing.jpg'
+import CoffeeCake from '@/public/images/coffee-cake.jpg'
+import ArtsyCake from '@/public/images/artsy-coffee.jpg'
 
 const HomeCard = () => {
     
@@ -10,11 +13,10 @@ const HomeCard = () => {
       <div className="hero min-h-screen">
         <div className="hero-overlay bg-opacity-60"></div>
         <div className="hero-content text-center text-neutral-content">
-          <div className="max-w-md">
-            <h1 className="mb-5 text-5xl font-bold">Hello there</h1>
-            <p className="mb-5">I should add something here about me and constrain this thing so it's smaller.</p>
-            {/* <button className="btn btn-primary">Get Started</button> */}
-            <AddToCart />
+          <div className="flex flex-wrap gap-8">
+            <Card src={CoffeWriting} altText="Coffee" title='Projects!' cardBodyText='Fun web and Css projects.' />
+            <Card src={CoffeeCake} altText="Coffee Cake" title='Coffee Shop!' cardBodyText='A mock coffee shop.' />
+            <Card src={ArtsyCake} altText="Artsy Coffee" title='Something else!' cardBodyText='Bacon ipsum dolor amet picanha alcatra buffalo turducken, t-bone tenderloin pastrami beef ribs ball tip burgdoggen.' />
           </div>
         </div>
       </div>
