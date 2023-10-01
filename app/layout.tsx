@@ -21,7 +21,7 @@ export default function RootLayout({
   console.log('This is rendered on the server in layout.tsx')
   //TODO: Add a theme button to the navbar so you can change the theme on command
   return (
-    <html lang="en" data-theme="winter">
+    <html lang="en" data-theme="winter" className="parallax">
       <body className={inter.className}>
         <AuthProvider>
           <NavBar />
