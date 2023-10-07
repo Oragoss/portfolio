@@ -18,8 +18,6 @@ export default function RootLayout({
 }: {
   children: React.ReactNode
 }) {
-  console.log('This is rendered on the server in layout.tsx')
-  //TODO: Add a theme button to the navbar so you can change the theme on command
   return (
     <html lang="en" data-theme="winter" className="parallax">
       <body className={inter.className}>

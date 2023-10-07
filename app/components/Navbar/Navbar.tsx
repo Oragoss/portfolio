@@ -6,7 +6,6 @@ import React from 'react'
 
 const NavBar = () => {
     const { status, data: session } = useSession();
-
   return (
     <div className="navbar bg-slate-200">
         <div className="flex-1">
@@ -19,17 +18,29 @@ const NavBar = () => {
             { status === 'loading' && <></> }
             { status === 'authenticated' && <li><Link href="/api/auth/signout">{session.user?.name}</Link></li> }
             { status === 'unauthenticated' && <li><Link href="/api/auth/signin">Sign In</Link></li> }
-            <li>
-                <details>
-                <summary>
-                    Options
-                </summary>
-                <ul className="p-2 bg-base-100">
-                    <li><Link href="/api/auth/signout">Sign Out</Link></li>
-                    <li><Link href="/users">Users</Link></li>
-                </ul>
-                </details>
-            </li>
+                <li>
+                    <details>
+                        <summary>
+                            Theme
+                        </summary>
+                        <ul className="p-2 bg-base-100 z-40">
+                            <li><Link href="/?theme=winter">Winter</Link></li>
+                            <li><Link href="/?theme=lemonade">Lemonade</Link></li>
+                            <li><Link href="/?theme=synthwave">Synthwave</Link></li>
+                        </ul>
+                    </details>
+                </li>
+                <li>
+                    <details>
+                        <summary>
+                            Options
+                        </summary>
+                        <ul className="p-2 bg-base-100 z-40">
+                            <li><Link href="/api/auth/signout">Sign Out</Link></li>
+                            <li><Link href="/users">Users</Link></li>
+                        </ul>
+                    </details>
+                </li>
             </ul>
         </div>
     </div>
